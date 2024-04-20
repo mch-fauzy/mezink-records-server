@@ -6,15 +6,12 @@ RUN wget -qO- https://github.com/jwilder/dockerize/releases/download/v0.6.1/dock
 
 WORKDIR /app
 
-COPY go.mod ./
-COPY go.sum ./
-RUN go mod download
-
 COPY . .
+
+RUN go mod download
 
 RUN go build -o main .
 
-COPY start.sh .
 RUN chmod +x start.sh
 
 ENTRYPOINT ["./start.sh"]

@@ -9,9 +9,8 @@ services:
     entrypoint: ["./start.sh"]
   db:
     image: mysql:8
-    restart: always
     ports:
       - '33062:3306'
     environment:
-      MYSQL_ROOT_PASSWORD: dev
-      MYSQL_DATABASE: records
+      MYSQL_ROOT_PASSWORD: ${DOCKER_DB_MYSQL_PASSWORD}
+      MYSQL_DATABASE: ${DOCKER_DB_MYSQL_NAME}

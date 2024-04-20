@@ -31,7 +31,7 @@ This API provides a way to fetch record based on startDate, endDate, minCount, a
 3. To start the application, run the following command in the project root folder:
 
    ```
-   docker compose up
+   docker-compose --env-file .env.docker up
    ```
 
 4. The API will be accessible at [http://localhost:8080](http://localhost:8080)
