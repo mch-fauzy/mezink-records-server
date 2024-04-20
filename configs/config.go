@@ -29,6 +29,10 @@ type Config struct {
 			}
 		}
 	}
+
+	Server struct {
+		Port string `mapstructure:"PORT"`
+	}
 }
 
 var (

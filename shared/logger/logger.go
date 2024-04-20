@@ -9,7 +9,7 @@ import (
 	"github.com/rs/zerolog/log"
 )
 
-// InitLogger initializes the logger
+// InitLogger initializes the zerolog logger
 func InitLogger() {
 	zerolog.TimeFieldFormat = zerolog.TimeFormatUnix
 	zerolog.SetGlobalLevel(zerolog.TraceLevel)
